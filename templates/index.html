@@ -21,6 +21,7 @@
             padding-top: 10px;
             padding-bottom: 5px;
             color: white;
+            border-radius: 25px;
         }
         .form1 {
             /* background: #000000; */
@@ -33,15 +34,16 @@
             border-left-width: 250px;
             border: 2px solid black;
             /* padding: 30px; */
-            background: white;   
+            background: white; 
+            border-radius: 25px;  
         }
         .row{
             width: 500px;
             
         }
         .head {
-            color: white;
-            background-color: darkblue;
+            color: black;
+            /* background-color: blue; */
             vertical-align: top;
             font-size: 20px;   
         }
@@ -64,20 +66,17 @@
 
 <body>
     <div class="head">
-        <hr>
-        <div class="" style="background-color:darkblue;" >
+        <div class="" style="background-color:lightblue; border-radius: 25px;" >
             <div class="clearfix">           
             <div class="col-md-12">
-            <center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
-            <center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
-            <center><p style="font-size:25px;color:white;margin-top:10px;"Machine Learning Lab Experiment</p></center> 
+            <center><p style="font-size:40px;color:black;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+            <center><p style="font-size:30px;color:black;margin-top:10px;">Department of Computer Engineering</p></center> 
+            <center><p style="font-size:25px;color:black;margin-top:10px;"Machine Learning Lab Experiment</p></center> 
             </div>
             </div>
             </div>
-            <hr>
-        <marquee behavior="  " direction="left">Machine Learning Experiment 6: Deploy All Modals and Pridict Placement for given Data</marquee>
-        <h5 style="font-size: 25px;">
-            <center> This is a Placement Prediction Internship project </center>
+            <h5 style="font-size: 20px; border-radius: 25px; color: black;">
+            <center>Placement Prediction using all Classification Models</center>
         </h5>
         
     </div>
@@ -128,33 +127,63 @@
                 </select>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">Naive Bayes Classifier</button>
+            <div  <label for="model1"  > <center>  Choose a Model</center></label>
+              <center>
+                   <select name="model1" id="exp">
+                     <option value="0">Random Forest Classifier</option>
+                     <option value="1">KNN Classifier</option>
+                     <option value="2">Decision Tree Classifier</option>
+                     <option value="3">SVM linear Classifier</option>
+                     <option value="4">SVM RBF Classifier</option>
+                     <option value="5">SVM Sigmoid Classifier</option>
+                     <option value="6">Naive Bayes Classifier</option>
+                   </select> </center>
+                 
+                 <br>
+                 <br>
+                 <br> <center>
+                 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                </center>
+                 </form>
+                 <br>
+                 <br>
+                     <center>
+                 {{ prediction_text }}
+                 <br>
+                 {{ accuracy_text }}
+                </center>
+
+                 </div>
+                 
+                 
+                 <!--class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=0>Random Forest Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">KNN Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=1>KNN Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">Decision Tree Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=2>Decision Tree Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">SVM linear Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=3>SVM linear Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">SVM RBF Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=4>SVM RBF Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">SVM Sigmoid Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=5>SVM Sigmoid Classifier</button>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-primary">Random Forest Classifier</button>
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=6>Naive Bayes Classifier</button>
             </div>
+            
         </form>
         
         
@@ -162,24 +191,23 @@
           {{prediction_text}}
         </p>
 
-    </div>
+    </div>-->
     
     <div class="tail">
         <h4>
-            This Model is Developed by Mohammed Umar Tanwar
+            This Model is Developed by Mohammed Umar Tanwar 
         </h4>
-        <h5> <center>
-            Under Guidance of Deepak Moud Sir
-        </center> 
-        </h5>
+        <fr>
+        <!-- <marquee behavior="  " direction="left" style="color: white; background-color: blue;"">Experiment Performed in Summer internship 2022 from 27 June to 8 August</marquee> -->
     
-    <!-- <div class="" style="background-color:skyblue;" >
+      <div class="" style="background-color:skyblue;" >
         <div class="clearfix">           
-        <div class="col-md-12">
-        <center><p style="font-size:20px;color:white;margin-top:10px;">Machine Learning Experiment 6: Deploy All Modals and Pridict Placement Analysis for given Data Set</p></center> 
+          <div class="col-md-12">
+            <center>
+            <marquee behavior="  " direction="left" style="color: white; background-color: blue;"">Experiment Performed in Summer internship 2022 from 27 June to 8 August</marquee>
+          </div>
         </div>
-        </div>
-        </div> -->
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
